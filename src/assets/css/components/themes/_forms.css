@@ -1,0 +1,63 @@
+.form-input {
+  position: relative;
+  margin-bottom: 13px;
+}
+
+.input-field-text::placeholder {
+  color: var(--secondary-text-color);
+}
+
+.input-field-text {
+  background: var(--input-background-color);
+  margin: 0;
+  font-size: 14px;
+  color: var(--input-text-color);
+  width: 100%;
+  font-family: var(--font-family);
+  padding: 12px 15px;
+  outline: 0;
+  border: 2px solid var(--input-background-color);
+  -webkit-appearance: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0;
+  box-sizing: border-box;
+  transition: .2s;
+}
+
+.input-field-text:focus {
+  background: #fff;
+  border-color: #d4d9dd;
+}
+
+.input-field-text:focus label {
+  opacity: .4;
+}
+
+.forgot-field {
+  font-size: 12px;
+  float: right;
+  margin: 11px 0 15px 0;
+  color: var(--secondary-text-color);
+  border-bottom: 1px solid var(--secondary-text-color);
+}
+
+forgot-password {
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.forgot-field:hover .forgot-password {
+  color: var(--hover-color);
+}
+
+.forgot-password:visited, .forgot-password:focus {
+  color: var(--secondary-text-color);
+}
+
+/* Media Queries Css */
+
+@media screen and (min-width: 960px) {
+
+}

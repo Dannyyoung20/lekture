@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <meta name="description" content="Learn web design, coding and much more with Lekture. You can learn at your own pace and become job ready within months. Start your free trial!"
+  />
+
+  <link rel="stylesheet" href="assets/css/core.css" />
+  <title>Lekture | Sign In</title>
+</head>
+
+<body>
+  <div class="sign-page">
+    <nav class="nav nav-slide-pus" role="navigation">
+      <div class="nav-container">
+        <a class="button-toggle">
+          <span class="toggler"></span>
+        </a>
+        <ul class="nav-wrap">
+          <li class="nav-item-logo">
+            <h6 class="logo-container">
+              <a href="#" class="nav-link logo">lekture</a>
+            </h6>
+          </li>
+          <li class="nav-item nav-item-main">
+            <a class="nav-link" href="#">Business</a>
+          </li>
+          <li class="nav-item nav-item-main">
+            <a class="nav-link" href="#">Become a Buddy</a>
+          </li>
+          <li class="nav-item nav-item-main">
+            <a class="nav-link active" href="#">Sign In</a>
+          </li>
+          <li class="nav-item nav-item-main">
+            <a class="nav-link nav-link-primary" href="#">Free Trial</a>
+          </li>
+        </ul>
+        <div class="nav-mobile">
+          <li class="nav-item-logo">
+            <h6 class="logo-container">
+              <a href="#" class="nav-link logo">lk</a>
+            </h6>
+          </li>
+          <li class="nav-item nav-item-main">
+            <a class="nav-link hide-sm" href="#">Sign In</a>
+          </li>
+          <li class="nav-item nav-item-main">
+            <a class="nav-link nav-link-primary" href="#">Free Trial</a>
+          </li>
+        </div>
+        <div id="menu" class="nav-sidebar">
+          <div class="nav-sidebar-wrapper">
+            <a href="#" class="nav-sideber-link">Business</a>
+            <a href="#" class="nav-sideber-link">Become a Buddy</a>
+            <a href="#" class="nav-sideber-link">Sign In</a>
+            <a href="#" class="nav-sideber-link nav-sidebar-primary-link">Free Trial</a>
+            <a href="#" class="nav-sideber-link">Help</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="body">
+      <div class="container">
+        <div class="grid-container">
+          <div class="grid-50 centered">
+            <div class="login-con">
+              <div class="grid-100">
+                <form id="sign-in-form">
+                  <div class="form-input">
+                    <input type="text" id="email" class="input-field-text" placeholder="Email Address" />
+                  </div>
+                  <div class="form-input">
+                    <input type="text" id="password" class="input-field-text" placeholder="Password" />
+                  </div>
+                  <p class="forgot-field">
+                    <a href="#" class="forgot-password">Forgotten Password?</a>
+                  </p>
+                  <button type="submit" class="sign-submit button bg-primary">Sign In</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+<script src="assets/js/bigSlide.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $('.button-toggle').bigSlide({
+    'push': ('.nav-slide-push'),
+  });
+
+</script>
+
+</html>

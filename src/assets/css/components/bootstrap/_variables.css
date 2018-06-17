@@ -1,0 +1,28 @@
+/* # Variables  */
+
+:root {
+  --primary-color: #43C5E9;
+  --secondary-color: #569CC8;
+  --primary-text-color: #717f86;
+  --secondary-text-color: #7b8b8e;
+  --primary-hover-color: #3bb5d6;
+  --font-size: 16px;
+  --hover-color: #4b5658;
+  --section-background: #F7F8FA;
+  --header-color: #384047;
+  --hr-color: #f0f2f4;
+  --input-text-color: #576366;
+  --input-background-color: #e8ebed;
+  --tutor-hero-color: #515564;
+  --optional-1: #D74EE2;
+  --optional-2: #43C5E9;
+  --optional-3: #9A86DE;
+  --optional-4: #DF89AE;
+  --optional-5: #569CC8;
+  --optional-6: #3D51F5;
+  --font-family: "Proxima Nova","Gotham Rounded A", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --border-radius: 4px;
+  --danger-color: crimson;
+  --success-color: green;
+  --warning-color: tomato;
+}

@@ -1,0 +1,30 @@
+/** Login Css **/
+
+.login-con {
+  background: #fff;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-con:before,
+.login-con:after {
+  content: '';
+  display: table;
+}
+
+.login-con:after {
+  clear: both;
+}
+
+.sign-page {
+  background-color: var(--primary-color);
+  padding-top: 70px;
+  height: 65vh;
+}
+
+.sign-page .container {
+  padding: 15px;
+}

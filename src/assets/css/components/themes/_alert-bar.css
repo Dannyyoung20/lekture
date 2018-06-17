@@ -1,0 +1,40 @@
+.alert {
+    background-color: #007791;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.alert__primary {
+	background-color: #007791;
+}
+
+.alert__purple {
+	background: var(--optional-3);
+}
+
+.alert__accent {
+	background: var(--optional-5);
+}
+
+.alert__danger {
+	background: #DC1516;
+}
+
+.alert__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.alert__title {
+	font-weight: 600;
+	margin-right: 6px;
+}
+
+.alert__timer {
+	font-size: 18px;
+	font-weight: 600;
+}

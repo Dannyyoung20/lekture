@@ -1,0 +1,98 @@
+.button {
+  font-size: 14px;
+  height: 40px;
+  line-height: 36px;
+  padding: 0 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-family);
+  font-weight: 500;
+  position: relative;
+  margin: 0 10px 0 0;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.button-fab {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  box-shadow: 0 3px 4px rgba(0, 65, 94, 0.4);
+}
+
+.button-rounded {
+  border-radius: 15px
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.button .button-primary {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button.button-secondary {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.button.button-success {
+  border-color: var(--success-color);
+  background-color: var(--success-color);
+  color: #fff;
+}
+
+.button.button-warning {
+  border-color: var(--warning-color);
+  background-color: var(--warning-color);
+  color: #fff;
+}
+
+.button.button-danger {
+  border-color: var(--danger-color);
+  background-color: var(--danger-color);
+  color: #fff;
+}
+
+/* Media Queries Css */
+
+@media screen and (min-width: 960px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (max-width: 679px) {}

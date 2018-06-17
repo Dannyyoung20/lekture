@@ -1,0 +1,118 @@
+/* General Styles */
+
+body {
+  background-color: #fff;
+  color: var(--primary-text-color);
+  font-size: var(--font-size);
+  font-style: normal;
+  line-height: 1.43;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.icon {
+  font-size: 20px;
+  display: inline-block;
+  color: var(--primary-text-color);
+}
+
+.vi {
+  vertical-align: -8%;
+}
+
+hr {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  border: 0;
+  border-top: 1px solid #e8e9eb;
+}
+
+a {
+  color: var(--primary-text-color);
+}
+
+.slide__left-arrow {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    color: var(--primary-color);
+    font-size: 24px;
+    height: 47px;
+    line-height: 1;
+    padding: 11px 0;
+    text-align: center;
+    bottom: 45%;
+    transform: translateY(-50%);
+    transition: .3s;
+    width: 47px;
+    z-index: 3;
+    position: absolute;
+    left: -15px;
+    padding-left: 2px;
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.slide__right-arrow {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    color: var(--primary-color);
+    font-size: 24px;
+    height: 47px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 11px 0;
+    text-align: center;
+    bottom: 45%;
+    transform: translateY(-50%);
+    transition: .3s;
+    width: 47px;
+    z-index: 3;
+    position: absolute;
+    right: -15px;
+    padding-left: 2px;
+    padding-right: 0;
+}
+
+.course-slide__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-slide__top h2 {
+    font-size: 20px;
+    color: #505763;
+    margin: 0 0 10px;
+    font-weight: 500;
+    text-align: left;
+    flex: 1;
+    min-width: 1px;
+    margin-bottom: 15px;
+}
+
+.course-slide__top a {
+    font-size: 18px;
+    padding: 0;
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.course-slide .card {
+    width: 216px;
+}
+
+.course-grid {
+    width: 909px;
+    padding: 0 0 15px;
+}

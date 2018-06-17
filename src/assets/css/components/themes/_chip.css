@@ -1,0 +1,86 @@
+.course-slide-u .mdc-chip {
+	box-shadow: 0 1px 0 rgba(41,48,59,.15);
+	padding: 7px 18px;
+	border-radius: 2px;
+	background: #fff;
+}
+
+.course-slide-u .mdc-chip-set {
+	width: 909px;
+	margin: 0 auto;
+}
+
+.chip-header {
+    width: 909px;
+    margin: 0 auto;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.chip-primary,.chip-danger,.chip-accent,.chip-warning,.chip-success,.chip-black,.chip-secondary
+{
+	transition: background 300ms ease, color 300ms ease;
+}
+
+.chip-primary {
+	color: var(--primary-color);
+}
+
+.chip-primary:hover {
+	color: #fcfcfc;
+	background: var(--primary-hover-color);
+}
+
+.chip-danger {
+	color: #dc3545;
+}
+
+.chip-danger:hover {
+	background: #cc1525;
+	color: #fcfcfc;
+}
+
+.chip-accent {
+	color: #6f42c1;
+}
+
+.chip-accent:hover {
+	background: #5f22a1;
+	color: #fcfcfc;
+}
+
+.chip-warning {
+	color: #fd7e14;
+}
+
+.chip-warning:hover {
+	background: #fd7e14;
+	color: #fcfcfc;
+}
+
+.chip-success {
+	color: #20c997;
+}
+
+.chip-success:hover {
+	background: #20c997;
+	color: #fcfcfc;
+}
+
+.chip-black {
+	color: #222;
+}
+
+.chip-black:hover {
+	background: #222;
+	color: #fcfcfc;
+}
+
+.chip-secondary {
+	color: var(--secondary-color);
+}
+
+.chip-secondary:hover {
+	background: var(--secondary-color);
+	color: #fcfcfc;
+}
