@@ -6,8 +6,6 @@
 @import './components/bootstrap/_general.css';
 
 
-@import "./components/themes/_navigation.css";
-
 /* # Themes */
 
 @import "./components/themes/_hero.css";

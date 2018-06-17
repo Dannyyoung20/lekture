@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "",
       "schematics": {},
       "architect": {
         "build": {
@@ -23,11 +23,18 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/slick-carousel/slick/slick.css",
+              "./node_modules/slick-carousel/slick/slick-theme.css",
+              "src/assets/css/dist/material-components-web.min.css",
               "src/assets/css/core.css",
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/jquery.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bigslide/dist/bigSlide.min.js",
+              "src/assets/css/dist/material-components-web.min.js",
+              "./node_modules/slick-carousel/slick/slick.min.js",
+              "src/assets/js/navScroll.js"
             ]
           },
           "configurations": {

@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
 /** Font Face **/
 
 @font-face {
-    font-family: 'Gotham Rounded A';
-    src: url('./assets/css/gotham-rounded/GothamRounded-Medium.otf');
-  }
-  
-  @font-face {
-      font-family: 'Proxima Nova';
-      src: url('./assets/css/fonts/proximanova-regular.a7942249.woff') format('woff');
-  }
+  font-family: 'Gotham Rounded A';
+  src: url('./assets/css/gotham-rounded/GothamRounded-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./assets/css/fonts/proximanova-regular.a7942249.woff') format('woff');
+}
+
