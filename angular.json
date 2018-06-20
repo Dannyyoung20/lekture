@@ -23,18 +23,18 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/mdc-layout-grid.css",
+              "src/assets/css/mdc-chips.css",
               "./node_modules/slick-carousel/slick/slick.css",
               "./node_modules/slick-carousel/slick/slick-theme.css",
-              "src/assets/css/dist/material-components-web.min.css",
               "src/assets/css/core.css",
               "src/styles.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bigslide/dist/bigSlide.min.js",
-              "src/assets/css/dist/material-components-web.min.js",
-              "./node_modules/slick-carousel/slick/slick.min.js",
-              "src/assets/js/navScroll.js"
+              "./src/assets/js/navScroll.js",
+              "./node_modules/slick-carousel/slick/slick.min.js"
             ]
           },
           "configurations": {

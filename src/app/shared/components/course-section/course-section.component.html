@@ -1,0 +1,15 @@
+<div class="course-slide-u">
+  <div class="container pt-3">
+    <div class="mdc-layout-grid course-grid">
+      <div class="course-slide__top">
+        <h2>Newest Courses</h2>
+        <a href="#">Show all</a>
+      </div>
+      <div class="mdc-layout-grid__inner course-slide">
+        <div class="mdc-layout-grid__cell--span-3" *ngFor="let course of courses">
+          <course-card></course-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

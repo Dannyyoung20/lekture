@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import 'bigslide';
+import '../../../../assets/js/navScroll.js';
 
 @Component({
   selector: 'navbar',
@@ -7,7 +9,6 @@ import * as $ from 'jquery';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
