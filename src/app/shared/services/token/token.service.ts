@@ -1,15 +1,9 @@
 import { Injectable } from '@angular/core';
-import { baseApiUrl } from '../../general/baseUrl';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenService {
-
-  private iss = {
-    login: baseApiUrl + '/login',
-    signup: baseApiUrl + '/signup'
-  };
 
   constructor() { }
 
@@ -25,7 +19,7 @@ export class TokenService {
   get getToken() {
     const token = localStorage.getItem('token');
     if (! token) {
-      return false;
+      return null;
     }
     return token;
   }
@@ -64,7 +58,7 @@ export class TokenService {
     return this.decodePayload(payload);
   }
 
-  isTokenValid() {
+  isTokenValid(): Boolean {
     const token = this.getToken;
     const expires_at: string = this.getExpires;
 
@@ -80,7 +74,7 @@ export class TokenService {
     return true;
   }
 
-  isLoggedIn() {
+  isLoggedIn(): Boolean {
     return this.isTokenValid();
   }
 }

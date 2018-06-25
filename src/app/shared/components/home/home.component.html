@@ -4,14 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="Learn web design, coding and much more with Lekture. You can learn at your own pace and become job ready within months. Start your free trial!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <meta name="description" content="Learn web design, coding and much more with Lekture. You can learn at your own pace and become job ready within months. Start your free trial!"
+  />
 
   <title>Lekture | Learning can be easy</title>
 </head>
 
 <body>
-  <navbar></navbar>
+  <div *ngIf="isAuthenticated">
+    <auth-navbar></auth-navbar>
+  </div>
+  <div *ngIf="!isAuthenticated">
+    <navbar></navbar>
+  </div>
   <section class="hero-img">
     <header class="hero">
       <div class="hero-section">
@@ -19,8 +26,12 @@
           <div class="column column-5 column-spacing">
             <div class="title">
               <h1 class="text-white text-large">Learn Web Design, Coding & Much More</h1>
-              <p>Lekture offers you a 3-day free trial to our expert buddies! Choose from 1,000s of expert and experienced buddies, from a JavaScript Buddy to even a Math's Buddy. Learn to anything and get the skills you need to launch a new career.</p>
-              <a href="#" class="hero-button-cta">Start Your Free Trial <span class="circle"></span></a>
+              <p>Lekture offers you a 3-day free trial to our expert buddies! Choose from 1,000s of expert and experienced buddies,
+                from a JavaScript Buddy to even a Math's Buddy. Learn to anything and get the skills you need to launch a
+                new career.</p>
+              <a href="#" class="hero-button-cta">Start Your Free Trial
+                <span class="circle"></span>
+              </a>
             </div>
           </div>
           <!-- #TODO 1: Finish Up Later -->
@@ -30,458 +41,501 @@
     </header>
   </section>
   <section class="section-courses bg-grey">
-	<!-- Cards Sections -->
-      <div *ngIf="isLoading; else courses">
-		<loading-card></loading-card>		  
-	  </div>
-	  <ng-template #courses>
-		  <course-section></course-section>
-	  </ng-template>
+    <!-- Cards Sections -->
+    <div *ngIf="isLoading; else courses">
+      <loading-card></loading-card>
+    </div>
+    <ng-template #courses>
+      <course-section></course-section>
+    </ng-template>
     <!-- Cards 2 Sections -->
-	  <div class="course-slide-u">
-	    <div class="container pt-3">
-	      <div class="mdc-layout-grid course-grid">
-	        <div class="course-slide__top">
-				<h2>Popular Courses on "Business"</h2>
-				<a href="#">Show all</a>
-			</div>
-	        <div class="mdc-layout-grid__inner course-slide">
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge">Best Seller</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/biz/1651660_d4fa_4.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Introduction To Maven</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N7,000</span>
-	                                    <span class="discount-price">N2,500</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge">Best Seller</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/biz/1385042_5c3e_4.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Advanced Coding Lessons</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N5,000</span>
-	                                    <span class="discount-price">N1,500</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge coral">Best Tutor</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/666914_6c60_3.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Beginner's Python Course</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N15,000</span>
-	                                    <span class="discount-price">N7,000</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge">Best Seller</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/1187016_51b3.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Data Sciences</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N25,000</span>
-	                                    <span class="discount-price">N11,000</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge coral">New Course</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/1218586_9f86.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Full Web Bootcamp</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N15,000</span>
-	                                    <span class="discount-price">N11,000</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
+    <div *ngIf="isLoading">
+      <loading-card></loading-card>
+    </div>
+    <div class="course-slide-u" *ngIf="!isLoading">
+      <div class="container pt-3">
+        <div class="mdc-layout-grid course-grid">
+          <div class="course-slide__top">
+            <h2>Popular Courses on "Business"</h2>
+            <a href="#">Show all</a>
+          </div>
+          <div class="mdc-layout-grid__inner course-slide">
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge">Best Seller</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/biz/1651660_d4fa_4.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Introduction To Maven</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N7,000</span>
+                          <span class="discount-price">N2,500</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge">Best Seller</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/biz/1385042_5c3e_4.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Advanced Coding Lessons</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N5,000</span>
+                          <span class="discount-price">N1,500</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge coral">Best Tutor</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/666914_6c60_3.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Beginner's Python Course</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N15,000</span>
+                          <span class="discount-price">N7,000</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge">Best Seller</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/1187016_51b3.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Data Sciences</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N25,000</span>
+                          <span class="discount-price">N11,000</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge coral">New Course</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/1218586_9f86.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Full Web Bootcamp</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N15,000</span>
+                          <span class="discount-price">N11,000</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<!-- Chips -->
-	  <div class="course-slide-u">
-	  	<div class="container">
-	  		<h3 class="chip-header">Popular Tags</h3>
-	  		<div class="mdc-chip-set">
-			  	<div class="mdc-chip chip-primary" tabindex="0">
-			    	<div class="mdc-chip__text">HTML</div>
-			  	</div>
-			  	<div class="mdc-chip chip-accent" tabindex="0">
-			    	<div class="mdc-chip__text">CSS</div>
-		  		</div>
-		  		<div class="mdc-chip chip-danger" tabindex="0">
-			    	<div class="mdc-chip__text">Graphics Design</div>
-		  		</div>
-		  		<div class="mdc-chip chip-warning" tabindex="0">
-			    	<div class="mdc-chip__text">Photography</div>
-		  		</div>
-		  		<div class="mdc-chip chip-success" tabindex="0">
-			    	<div class="mdc-chip__text">Project Management</div>
-		  		</div>
-		  		<div class="mdc-chip chip-danger" tabindex="0">
-			    	<div class="mdc-chip__text">Adobe XD</div>
-		  		</div>
-		  		<div class="mdc-chip chip-primary" tabindex="0">
-			    	<div class="mdc-chip__text">Design</div>
-		  		</div>
-		  		<div class="mdc-chip chip-success" tabindex="0">
-			    	<div class="mdc-chip__text">Python</div>
-		  		</div>
-		  		<div class="mdc-chip chip-black" tabindex="0">
-			    	<div class="mdc-chip__text">Hacking</div>
-		  		</div>
-		  		<div class="mdc-chip chip-secondary" tabindex="0">
-			    	<div class="mdc-chip__text">IT & Software</div>
-		  		</div>
-			</div>
-	  	</div>
-	  </div>
-	<!-- Cards 3 Sections -->
-	  <div class="course-slide-u">
-	    <div class="container pt-3">
-	      <div class="mdc-layout-grid course-grid">
-	        <div class="course-slide__top">
-	              <h2>Popular Courses on "Web Development"</h2>
-	              <a href="#">Show all</a>
-	          </div>
-	        <div class="mdc-layout-grid__inner course-slide">
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge">Best Seller</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/biz/1651660_d4fa_4.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Introduction To Maven</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N7,000</span>
-	                                    <span class="discount-price">N2,500</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge">Best Seller</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/biz/1385042_5c3e_4.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Advanced Coding Lessons</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N5,000</span>
-	                                    <span class="discount-price">N1,500</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge coral">Best Tutor</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/666914_6c60_3.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Beginner's Python Course</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N15,000</span>
-	                                    <span class="discount-price">N7,000</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge">Best Seller</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/1187016_51b3.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Data Sciences</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N25,000</span>
-	                                    <span class="discount-price">N11,000</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="mdc-layout-grid__cell--span-3">
-	            <div class="card">
-	              <div class="card__wrapper">
-	                  <span class="card__course-badge">
-	                    <span class="badge badge-accented card__badge coral">New Course</span>
-	                  </span>
-	                  <a href="#" class="card__mask">
-	                      <span class="card__img-container"><img src="assets/css/img/cards/1218586_9f86.jpg" class="card__img" alt="Testing"></span>
-	                      <span class="card__course-details">
-	                            <span>
-	                                <span class="card__title">Full Web Bootcamp</span>
-	                            </span>
-	                            <div class="card__instructor-info">
-	                                <span>Okpala Chucks</span>
-	                            </div>
-	                            <div class="card__instructor-info">
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                                <span class="icon ion-ios-star-outline"></span>
-	                            </div>
-	                            <div class="card__pricing">
-	                                <span>
-	                                    <span class="original-price">N15,000</span>
-	                                    <span class="discount-price">N11,000</span>
-	                                </span>
-	                            </div>
-	                      </span>
-	                  </a>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
+    <!-- Chips -->
+    <div class="course-slide-u">
+      <div class="container">
+        <h3 class="chip-header">Popular Tags</h3>
+        <div class="mdc-chip-set">
+          <div class="mdc-chip chip-primary" tabindex="0">
+            <div class="mdc-chip__text">HTML</div>
+          </div>
+          <div class="mdc-chip chip-accent" tabindex="0">
+            <div class="mdc-chip__text">CSS</div>
+          </div>
+          <div class="mdc-chip chip-danger" tabindex="0">
+            <div class="mdc-chip__text">Graphics Design</div>
+          </div>
+          <div class="mdc-chip chip-warning" tabindex="0">
+            <div class="mdc-chip__text">Photography</div>
+          </div>
+          <div class="mdc-chip chip-success" tabindex="0">
+            <div class="mdc-chip__text">Project Management</div>
+          </div>
+          <div class="mdc-chip chip-danger" tabindex="0">
+            <div class="mdc-chip__text">Adobe XD</div>
+          </div>
+          <div class="mdc-chip chip-primary" tabindex="0">
+            <div class="mdc-chip__text">Design</div>
+          </div>
+          <div class="mdc-chip chip-success" tabindex="0">
+            <div class="mdc-chip__text">Python</div>
+          </div>
+          <div class="mdc-chip chip-black" tabindex="0">
+            <div class="mdc-chip__text">Hacking</div>
+          </div>
+          <div class="mdc-chip chip-secondary" tabindex="0">
+            <div class="mdc-chip__text">IT & Software</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cards 3 Sections -->
+    <div *ngIf="isLoading">
+      <loading-card></loading-card>
+    </div>
+    <div class="course-slide-u" *ngIf="!isLoading">
+      <div class="container pt-3">
+        <div class="mdc-layout-grid course-grid">
+          <div class="course-slide__top">
+            <h2>Popular Courses on "Web Development"</h2>
+            <a href="#">Show all</a>
+          </div>
+          <div class="mdc-layout-grid__inner course-slide">
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge">Best Seller</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/biz/1651660_d4fa_4.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Introduction To Maven</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N7,000</span>
+                          <span class="discount-price">N2,500</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge">Best Seller</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/biz/1385042_5c3e_4.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Advanced Coding Lessons</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N5,000</span>
+                          <span class="discount-price">N1,500</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge coral">Best Tutor</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/666914_6c60_3.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Beginner's Python Course</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N15,000</span>
+                          <span class="discount-price">N7,000</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge">Best Seller</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/1187016_51b3.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Data Sciences</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N25,000</span>
+                          <span class="discount-price">N11,000</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-3">
+              <div class="card">
+                <div class="card__wrapper">
+                  <span class="card__course-badge">
+                    <span class="badge badge-accented card__badge coral">New Course</span>
+                  </span>
+                  <a href="#" class="card__mask">
+                    <span class="card__img-container">
+                      <img src="assets/css/img/cards/1218586_9f86.jpg" class="card__img" alt="Testing">
+                    </span>
+                    <span class="card__course-details">
+                      <span>
+                        <span class="card__title">Full Web Bootcamp</span>
+                      </span>
+                      <div class="card__instructor-info">
+                        <span>Okpala Chucks</span>
+                      </div>
+                      <div class="card__instructor-info">
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                        <span class="icon ion-ios-star-outline"></span>
+                      </div>
+                      <div class="card__pricing">
+                        <span>
+                          <span class="original-price">N15,000</span>
+                          <span class="discount-price">N11,000</span>
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <section class="section bg-primary">
-	  	<div class="container">
-	  		<div class="grid-50 centered">
-	  			<div class="modal-journey">
-	  				<div class="modal-journey__header">
-	  					<h3>An Unbeatable Experience</h3>
-	  				</div>
-	  				<ul class="modal-journey__features">
-	  					<li><span class="icon ion-ios-information-outline vi"></span> Learn from Expert Developers</li>
-	  					<li><span class="icon ion-ios-information-outline vi"></span> Practise real world examples one-on-one with tutor</li>
-	  					<li><span class="icon ion-ios-information-outline vi"></span> And much more...</li>
-	  				</ul>
-	  				<div class="modal-journey-cta">
-	  					<a href="#" class="mdc-button mdc-button--raised">Start Your Journey</a>
-	  				</div>
-	  			</div>
-	  		</div>
-	  	</div>
+  <section class="section bg-primary" *ngIf="!isLoading">
+    <div class="container">
+      <div class="grid-50 centered">
+        <div class="modal-journey">
+          <div class="modal-journey__header">
+            <h3>An Unbeatable Experience</h3>
+          </div>
+          <ul class="modal-journey__features">
+            <li>
+              <span class="icon ion-ios-information-outline vi"></span> Learn from Expert Developers</li>
+            <li>
+              <span class="icon ion-ios-information-outline vi"></span> Practise real world examples one-on-one with tutor</li>
+            <li>
+              <span class="icon ion-ios-information-outline vi"></span> And much more...</li>
+          </ul>
+          <div class="modal-journey-cta">
+            <a href="#" class="mdc-button mdc-button--raised">Start Your Journey</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-	<footer class="footer">
-		<div class="container">
-			<div class="mdc-layout-grid">
-				<div class="mdc-layout-grid__inner">
-					<div class="mdc-layout-grid__cell--span-3-desktop">
-						<a href="#" class="footer-logo">
-							<img src="assets/css/img/lekture.png" width="139" alt="Lekture Foter Image" />
-						</a>
-						<p class="mt-1">&copy; 2018 Lekture, Inc.</p>
-					</div>
-					<div class="mdc-layout-grid__cell--span-3-desktop">
-						<ul>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-					<div class="mdc-layout-grid__cell--span-2-desktop">
-						<ul>
-							<li><b><a href="#">Business</a></b></li>
-							<li><a href="#">Help</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<div class="hr-primary"></div>
+  <footer class="footer">
+    <div class="container">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell--span-3-desktop">
+            <a href="#" class="footer-logo">
+              <img src="assets/css/img/lekture.png" width="139" alt="Lekture Foter Image" />
+            </a>
+            <p class="mt-1">&copy; 2018 Lekture, Inc.</p>
+          </div>
+          <div class="mdc-layout-grid__cell--span-3-desktop">
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mdc-layout-grid__cell--span-2-desktop">
+            <ul>
+              <li>
+                <b>
+                  <a href="#">Business</a>
+                </b>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="hr-primary"></div>
 </body>
 
 </html>

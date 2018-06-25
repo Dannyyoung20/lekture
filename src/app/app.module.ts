@@ -17,6 +17,9 @@ import { LoadingModule } from './shared/modules/loading/loading.module';
 import { NgxContentLoadingModule } from 'ngx-content-loading';
 import { HttpModule } from '@angular/http';
 import { AuthGuard } from './shared/guards/auth/auth-guard.service';
+import { AuthNavbarComponent } from './shared/components/auth-navbar/auth-navbar.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './shared/helpers/jwt-intercept';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { AuthGuard } from './shared/guards/auth/auth-guard.service';
     HomeComponent,
     NotFoundComponent,
     CourseCardComponent,
-    CourseSectionComponent
+    CourseSectionComponent,
+    AuthNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,10 +39,16 @@ import { AuthGuard } from './shared/guards/auth/auth-guard.service';
     LoadingModule,
     NgxContentLoadingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

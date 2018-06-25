@@ -6,9 +6,34 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="assets/css/img/lekture mini.png">
+  <link rel="stylesheet" type="text/css" href="./assets/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./assets/slick-carousel/slick/slick-theme.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
 <body>
   <root></root>
 </body>
+<script src="./assets/slick-carousel/slick/slick.min.js" type="text/javascript"></script>
+<script>
+
+    $('.course-slide').slick({
+      // normal options...
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      prevArrow: `<i class="icon ion-android-arrow-back slide__left-arrow"></i>`,
+      nextArrow: `<i class="icon ion-android-arrow-forward slide__right-arrow"></i>`,
+
+      // the magic
+      responsive: [{
+          breakpoint: 600,
+          settings: 'unslick' // destroys slick
+
+        }]
+    });
+</script>
+
+<script src="./assets/js/navScroll.js"></script>
 </html>

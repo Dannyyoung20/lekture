@@ -116,3 +116,7 @@ a {
     width: 909px;
     padding: 0 0 15px;
 }
+
+.footer p, .footer a {
+    font-size: 13px;
+}

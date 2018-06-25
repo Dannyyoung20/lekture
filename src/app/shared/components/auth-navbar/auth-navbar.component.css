@@ -1,8 +1,63 @@
+.courses-cat__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  align-items: flex-start;
+  background: #f7f8fa;
+  border-bottom: 1px solid #dedfe0;
+  height: 42px;
+  padding: 0;
+}
+
+.courses-cat__links a {
+  line-height: 1.1;
+}
+
+.links__category {
+  display: block;
+  color: #686f7a;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 11px 16px;
+}
+
+.links__category i {
+  margin-right: 2px;
+}
+
+.links__category:hover {
+  background-color: #e8e9eb;
+}
+
+.nav-noty {
+  position: relative;
+}
+
+.nav-noty:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+
+.dropdown:hover .dropdown__menu {
+  display: block;
+}
+
+.notification:hover .dropdown__menu {
+  display: block;
+}
+
 /** Navigation Css **/
 
 .nav {
   background: #fff;
-  box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);  
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 28, .1);
   border: none;
   z-index: 400;
   position: fixed;
@@ -34,7 +89,8 @@
   text-align: right;
 }
 
-.nav-wrap:before, .nav-wrap:after {
+.nav-wrap:before,
+.nav-wrap:after {
   content: '';
   display: table;
 }
@@ -206,12 +262,13 @@
 .nav-sideber-link {
   color: var(--primary-text-color);
   font-size: var(--font-size);
-  transisiton: color 300ms 0s ease;
+  transition: color 300ms 0s ease;
   display: block;
   padding: 15px 0px;
 }
 
-.nav-sideber-link:hover, .navsiebar-link:focus {
+.nav-sideber-link:hover,
+.nav-sidebar-link:focus {
   color: var(--hover-color);
 }
 
@@ -333,7 +390,6 @@
     line-height: 40px;
     font-size: 18px;
   }
-
   .nav-toggle-active {
     bottom: 0;
     height: 100%;
